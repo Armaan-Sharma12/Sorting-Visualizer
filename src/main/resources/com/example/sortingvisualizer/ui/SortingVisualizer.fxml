@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.sortingvisualizer.ui.SortingVisualizerController">
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10.0" right="10.0" bottom="10.0" left="10.0"/>
+            </padding>
+            <ComboBox fx:id="algorithmSelector" prefWidth="150"/>
+            <Button text="Start" onAction="#handleStart"/>
+            <Button text="Shuffle" onAction="#handleShuffle"/>
+            <Button text="Reset" onAction="#handleReset"/>
+            <Label text="Speed:"/>
+            <Slider fx:id="speedSlider" min="0.1" max="2.0" value="1.0" blockIncrement="0.1" prefWidth="150"/>
+        </HBox>
+    </top>
+    <center>
+        <Canvas fx:id="canvas" width="800" height="400"/>
+    </center>
+</BorderPane>
